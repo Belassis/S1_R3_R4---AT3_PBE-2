@@ -256,6 +256,130 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Cliente
+    meta:
+      id: fld_cd39f64023f14d54b7f20bfb4ccd5424
+      created: 1775580033384
+      modified: 1775580033384
+      sortKey: -1775580033384
+      description: ""
+    children:
+      - url: localhost:8000/clientes
+        name: Selecionar cliente
+        meta:
+          id: req_2ff19971cd2640f7b28851f234837dee
+          created: 1775580036267
+          modified: 1776168613221
+          isPrivate: false
+          description: ""
+          sortKey: -1775580036267
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes
+        name: Criar Cliente
+        meta:
+          id: req_0851d293d6054131846b54c649edbe86
+          created: 1775580040645
+          modified: 1776170599239
+          isPrivate: false
+          description: ""
+          sortKey: -1775580040645
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Isabelly", 
+            	"cpf": "12345678909",
+            	"telefone": ["19993896177"],
+            	"cep": "13178650",
+            	"numero": 23,
+            	"complemento": "casa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes/5
+        name: Editar cliente
+        meta:
+          id: req_612f81ecfb13454189eb60a4f3763e39
+          created: 1775589285965
+          modified: 1776174740690
+          isPrivate: false
+          description: ""
+          sortKey: -1775589285965
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"telefone": "999999990",
+            	"numero": "1234",
+            	"complemento": "casa roxa 002",
+            	"cep": "13170023"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes/5
+        name: Deletar cliente
+        meta:
+          id: req_bfd4567af5ca4e1eabb082c998fb7775
+          created: 1775589305728
+          modified: 1776180028254
+          isPrivate: false
+          description: ""
+          sortKey: -1775589305728
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
