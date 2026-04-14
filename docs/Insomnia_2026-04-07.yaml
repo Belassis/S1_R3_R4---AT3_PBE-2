@@ -1,0 +1,271 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Aula-Demo-2
+meta:
+  id: wrk_31b2b6cbb9c549c094d308d86cef9b3d
+  created: 1774963682689
+  modified: 1774963682689
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_415b1935c98343a6b55f608d99b1cb2b
+      created: 1775561768226
+      modified: 1775562160778
+      sortKey: -1775561768226
+      description: ""
+    children:
+      - url: localhost:8000/produtos/2
+        name: Editar
+        meta:
+          id: req_3042985d42b14171b6a1576182560c8e
+          created: 1775561771625
+          modified: 1775564932858
+          isPrivate: false
+          description: ""
+          sortKey: -1775561771625
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"Nome": "Teclado",
+            	"Valor": 34.90,
+            	"IdCategoria": 2 
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/1
+        name: Deletar
+        meta:
+          id: req_3df1099af3084580b017bd01bec764af
+          created: 1775561775351
+          modified: 1775564675725
+          isPrivate: false
+          description: ""
+          sortKey: -1775561775351
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos
+        name: Postar
+        meta:
+          id: req_f75e98a5e98f4b929002e46350c7ac1c
+          created: 1775561776892
+          modified: 1775564274392
+          isPrivate: false
+          description: ""
+          sortKey: -1775561776892
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: Eletronico
+            - name: Valor
+              value: "34.99"
+              description: ""
+              disabled: false
+            - name: IdCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: CaminhoImagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\49218628852\Pictures\LogonovaRapidoESeguro.png
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos
+        name: Listar
+        meta:
+          id: req_88e3faa1891f434796d577f4614e382f
+          created: 1775561778557
+          modified: 1775563745130
+          isPrivate: false
+          description: ""
+          sortKey: -1775561778557
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categorias
+    meta:
+      id: fld_c9430353288c4d1a9e98154848653ba8
+      created: 1775562155807
+      modified: 1775562155807
+      sortKey: -1775562155807
+      description: ""
+    children:
+      - url: localhost:8000/categorias
+        name: Listar
+        meta:
+          id: req_839e576cca2849ab8978a9b47f5b2f4b
+          created: 1774963689617
+          modified: 1775562176843
+          isPrivate: false
+          description: ""
+          sortKey: -1775562166644
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias
+        name: Postar
+        meta:
+          id: req_f59b5593f15f418487c184b03f925190
+          created: 1774963692870
+          modified: 1775562501017
+          isPrivate: false
+          description: ""
+          sortKey: -1775562166744
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Mouse",
+            	"descricao": "jkhghgfkfrikjytfr"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/2
+        name: Alterar
+        meta:
+          id: req_6f21dcac56e7497fb41cff7c0b4378cd
+          created: 1774963696972
+          modified: 1775562670685
+          isPrivate: false
+          description: ""
+          sortKey: -1775562166544
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Mouse2",
+            	"descricao": "jkhghgfkfrikjytfr2"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/3
+        name: Deletar
+        meta:
+          id: req_9fa52deb52254c21826770c99be7af4e
+          created: 1774963700154
+          modified: 1775562596908
+          isPrivate: false
+          description: ""
+          sortKey: -1775562166444
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fcdbf7132b8637be641b7fbc5f59ce22000c26be
+    created: 1774963682714
+    modified: 1774963682714
+environments:
+  name: Base Environment
+  meta:
+    id: env_fcdbf7132b8637be641b7fbc5f59ce22000c26be
+    created: 1774963682701
+    modified: 1774963682701
+    isPrivate: false
