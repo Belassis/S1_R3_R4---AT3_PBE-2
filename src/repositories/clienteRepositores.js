@@ -78,7 +78,7 @@ const clienteRepository = {
 
     selecionar: async () => {
         // usar o INNER JOIN para "juntar" as dados das tabelas
-        const sql = 'SELECT * FROM clientes';
+        const sql = 'SELECT * FROM clientes As e ON c.id = e.ClidenteId INNER JOIN telefones AS t ON c.id = t.ClienteId';
         const [rows] = await connection.execute(sql);
         return rows;
     },
