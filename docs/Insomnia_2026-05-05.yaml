@@ -380,6 +380,224 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Pedidos
+    meta:
+      id: fld_192932b461714cffb0a24cb690edb017
+      created: 1777392831591
+      modified: 1777392854159
+      sortKey: -1777392835552
+      description: ""
+    children:
+      - url: localhost:8000/pedidos
+        name: Deletar Pedido
+        meta:
+          id: req_3a27a429f5eb4f5383aaf746fd00929e
+          created: 1777392867456
+          modified: 1777986578092
+          isPrivate: false
+          description: ""
+          sortKey: -1777392867456
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/pedidos
+        name: Criar Pedidos
+        meta:
+          id: req_becd85194e774806b0bb04117b37216e
+          created: 1777392876040
+          modified: 1777986557799
+          isPrivate: false
+          description: ""
+          sortKey: -1777392876040
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "clienteId": 1,
+              "itens": [
+                {
+                  "produtoId": 2,
+                  "quantidade": 2,
+                  "valorItem": 10.5
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/pedidos
+        name: Selecionar Pedidos
+        meta:
+          id: req_1ac6c9b68405409f875072b714986a29
+          created: 1777392877596
+          modified: 1777986546893
+          isPrivate: false
+          description: ""
+          sortKey: -1777392877596
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Itens Pedido
+    meta:
+      id: fld_3ce86271e1f14d0da2a8fbe86b25a162
+      created: 1777988718762
+      modified: 1777995888170
+      sortKey: -1777988718762
+      description: ""
+    children:
+      - url: localhost:8000/pedidos/9/itens
+        name: Criar ItemPedido
+        meta:
+          id: req_cd0c1471fe61431bb025065ee5f514f3
+          created: 1777988722257
+          modified: 1777994248049
+          isPrivate: false
+          description: ""
+          sortKey: -1777988722257
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "produtoId": 2,
+              "quantidade": 2,
+              "valorItem": 10
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/pedidos/itens/3
+        name: Editar ItemPedido
+        meta:
+          id: req_0ec46a5bd93c4355a1d8a647de10ba21
+          created: 1777988822115
+          modified: 1777994319264
+          isPrivate: false
+          description: ""
+          sortKey: -1777988822115
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "quantidade": 4
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/pedidos/itens/6
+        name: Deletar ItemPedido
+        meta:
+          id: req_615db64163c24d0abfb2babcfd4ae35a
+          created: 1777988888016
+          modified: 1777994761928
+          isPrivate: false
+          description: ""
+          sortKey: -1777988888016
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/pedidos/9/status
+        name: Alterar Status
+        meta:
+          id: req_37e15527a4b649089f987616def59d65
+          created: 1777989016628
+          modified: 1777993609000
+          isPrivate: false
+          description: ""
+          sortKey: -1777989016628
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "status": "FINALIZADO"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
